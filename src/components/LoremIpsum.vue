@@ -1,5 +1,5 @@
 <template>
-    <div v-if="hasText">{{loremIpsum}}</div>
+    <div id="bacon" v-if="hasText">{{loremIpsum}}</div>
 </template>
 
 <script>
