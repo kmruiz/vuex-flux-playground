@@ -25,6 +25,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "jest": "^25.3.0",
+    "jest-fetch-mock": "^3.0.3",
     "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.11"
   },
@@ -56,6 +57,10 @@
     "transform": {
       ".*\\.(js)$": "babel-jest",
       ".*\\.(vue)$": "vue-jest"
-    }
+    },
+    "setupFiles": [
+      "./setupJest.js"
+    ],
+    "automock": false
   }
 }

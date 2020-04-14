@@ -9,7 +9,6 @@
  import { mapState, mapActions } from 'vuex'
  import { NAME as REFRESH } from '../commands/refresh'
 
-
  export default {
      computed: mapState({
          isLoading: state => state.bacon.isLoading,
