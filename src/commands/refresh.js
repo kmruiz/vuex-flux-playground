@@ -7,7 +7,7 @@ export default async ({ commit }) => {
     const response = await fetch("https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1")
     if (response.ok) {
         const body = await response.json()
-        const asText = body.reduce((a, b) => a + '\n' + b, '').trim()
+        const asText = body.reduce((a, b) => a + '\n\n' + b, '').trim()
         commit(REFRESH_SUCCESSFUL, asText)
     } else {
         commit(REFRESH_FAILED, 'Magic error')

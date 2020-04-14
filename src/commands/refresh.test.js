@@ -27,7 +27,6 @@ describe('refresh command', () => {
         expect(context.commit).toHaveBeenCalledWith(REFRESH_SUCCESSFUL, 'Hello World!')
     })
 
-
     it('should dispatch a failed refresh evebt when the backend answers with an error code', async () => {
         fetch.once(() => Promise.resolve({ status: 500, body: ''}))
         await refresh(context)
